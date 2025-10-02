@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ponytail Boutique</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">PB</div>
+    <h1>Ponytail Boutique</h1>
+    <nav>
+      <a href="#products">Products</a>
+      <a href="#signup">Sign-Up</a>
+      <a href="#contact">Contact</a>
+      <button id="cartBtn">Cart 🛒 (<span id="cartCount">0</span>)</button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Elegant & Chic Ponytails</h2>
+      <p>Browse our collection of high-quality ponytails in natural shades of brown.  
+         Sign up for updates to be the first to know about new stock.</p>
+      <button class="primary-btn" onclick="document.getElementById('signup').scrollIntoView()">Join Our List</button>
+    </div>
+    <div class="hero-img">
+      <img src="images/hero-ponytail.jpg" alt="Ponytail model">
+    </div>
+  </section>
+
+  <!-- Customization Panel -->
+  <section id="customize" class="customize">
+    <h2>Customize Your View</h2>
+    <label>
+      Theme color:
+      <input type="color" id="themeColor" value="#b98a6b">
+    </label>
+    <label>
+      Text size:
+      <input type="range" id="fontSize" min="14" max="22" value="16">
+    </label>
+  </section>
+
+  <!-- Products -->
+  <section id="products" class="products">
+    <h2>Our Ponytails</h2>
+    <div class="product-grid" id="productGrid">
+      <!-- JS will load products here -->
+    </div>
+  </section>
+
+  <!-- Sign-Up / Newsletter -->
+  <section id="signup" class="signup">
+    <h2>Be a Consistent Customer</h2>
+    <form id="signupForm">
+      <input type="email" id="signupEmail" placeholder="Enter your email" required>
+      <button type="submit" class="primary-btn">Sign Up</button>
+    </form>
+    <p id="signupMsg"></p>
+  </section>
+
+  <!-- Chat -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ponytail Atelier — Live Motion Store</title>
+  <meta name="description" content="Motion-rich ponytails store — customizable theme, shop, cart, chat." />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <div class="wrap header-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">PA</div>
+        <div>
+          <div class="brand-title">Ponytail Atelier</div>
+          <div class="brand-sub">Elegance · Motion · You</div>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#products">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="customizeToggle" class="icon-btn" title="Customize site">⚙️</button>
+        <button id="cartBtn" class="cart-btn" aria-label="Open cart">
+          🛒 <span id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" id="hero">
+    <div class="hero-slides" id="heroSlides" aria-hidden="false"></div>
+
+    <div class="hero-content wrap">
+      <h1 class="hero-title">Live motion ponytails — beautiful, bold, bespoke.</h1>
+      <p class="hero-sub">Light nude & brown palettes. Customizable view. Shop now — feel the motion.</p>
+      <div class="hero-cta">
+        <a href="#products" class="btn primary">Shop Collection</a>
+        <a href="#signup" class="btn">Join Waitlist</a>
+      </div>
+    </div>
+
+    <div class="floating-previews" aria-hidden="true">
+      <img src="images/ponytail1.jpg" alt="" class="float-item f1">
+      <img src="images/ponytail2.jpg" alt="" class="float-item f2">
+      <img src="images/ponytail3.jpg" alt="" class="float-item f3">
+    </div>
+  </section>
+
+  <main class="wrap">
+    <aside class="custom-panel" id="customPanel" aria-hidden="true" style="display:none;">
+      <h3>Customize this view</h3>
+      <label>Theme color <input id="themeColor" type="color" value="#b98a6b"></label>
+      <label>Base font size <input id="fontSize" type="range" min="14" max="20" value="16"></label>
+      <label>Layout <select id="layoutSelect">
+        <option value="grid">Grid</option>
+        <option value="list">List</option>
+      </select></label>
+      <label><input id="reduceMotion" type="checkbox"> Reduce motion</label>
+      <div style="margin-top:12px">
+        <button id="resetTheme" class="btn">Reset</button>
+      </div>
+    </aside>
+
+    <section id="products" class="products-section" aria-label="Products">
+      <div class="section-head">
+        <h2>Shop Ponytails</h2>
+        <div class="controls">
+          <input id="searchInput" type="search" placeholder="Search ponytails..." aria-label="Search ponytails">
+          <select id="sortSelect" aria-label="Sort products">
+            <option value="featured">Featured</option>
+            <option value="price-asc">Price — low to high</option>
+            <option value="price-desc">Price — high to low</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="productGrid" class="product-grid" role="list"></div>
+    </section>
+
+    <aside id="cartDrawer" class="cart-drawer" aria-hidden="true">
+      <div class="cart-head">
+        <h3>Your Cart</h3>
+        <button id="closeCart" class="icon-btn">✕</button>
+      </div>
+      <div id="cartItems" class="cart-items" role="list"></div>
+      <div class="cart-footer">
+        <div class="cart-total">Total: <span id="cartTotal">$0.00</span></div>
+        <div class="cart-actions">
+          <button id="checkoutPaystack" class="btn primary">Checkout with Paystack</button>
+          <button id="checkoutStripe" class="btn">Checkout with Stripe</button>
+        </div>
+      </div>
+    </aside>
+
+    <section id="signup" class="signup">
+      <h3>Be a consistent customer</h3>
+      <p>Sign up for restock alerts & exclusive drops.</p>
+      <form id="signupForm" class="signup-form" autocomplete="email">
+        <input id="signupEmail" type="email" placeholder="you@example.com" required>
+        <button class="btn primary" type="submit">Sign Up</button>
+      </form>
+      <div id="signupMsg" class="muted"></div>
+    </section>
+
+    <div class="chat-widget" id="chatWidget" aria-hidden="false">
+      <div class="chat-header">
+        <div>Live Chat</div>
+        <button id="chatToggle" class="icon-btn">✕</button>
+      </div>
+      <div id="chatLog" class="chat-log" role="log" aria-live="polite"></div>
+      <form id="chatForm" class="chat-form">
+        <input id="chatInput" type="text" aria-label="Chat message" placeholder="Ask about size, color, shipping...">
+        <button class="btn" type="submit">Send</button>
+      </form>
+    </div>
+
+    <section id="about" class="about">
+      <h3>About Ponytail Atelier</h3>
+      <p>A boutique approach — clean design, meaningful motion, and curated ponytails in soft nude & brown tones.</p>
+    </section>
+  </main>
+
+  <footer id="contact" class="site-footer">
+    <div class="wrap footer-inner">
+      <div>© <span id="year"></span> Ponytail Atelier</div>
+      <div>Contact: <a href="mailto:hello@ponytailatelier.com">hello@ponytailatelier.com</a></div>
+    </div>
+  </footer>
+
+  <div id="productModal" class="product-modal" aria-hidden="true" style="display:none;">
+    <div class="modal-inner">
+      <button id="modalClose" class="icon-btn modal-close">✕</button>
+      <div class="modal-grid">
+        <div class="modal-image"><img id="modalImage" src="" alt=""></div>
+        <div class="modal-info">
+          <h3 id="modalTitle"></h3>
+          <div id="modalDesc" class="muted"></div>
+          <div class="modal-price" id="modalPrice"></div>
+          <div class="modal-actions">
+            <label>Qty: <input id="modalQty" type="number" value="1" min="1" style="width:70px"></label>
+            <button id="modalAdd" class="btn primary">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
